@@ -27,3 +27,8 @@ Fallopia <- read.csv("InputData/FallopiaData.csv")
 library(dplyr) #load required packages
 ```
 
+##Remove Rows with **'Total'** <60
+```{r}
+X <- filter(Fallopia, Total<60)
+head(X)
+```
