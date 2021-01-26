@@ -32,3 +32,9 @@ library(dplyr) #load required packages
 X <- filter(Fallopia, Total<60)
 head(X)
 ```
+
+##Reorder and Remove Columns
+```{r}
+X <- select(Fallopia, Total, Taxon, Scenario, Nutrients)
+head(X)
+```
