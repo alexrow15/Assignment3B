@@ -21,3 +21,4 @@ This report will manipualte a dataset to exemplify use of dplyr and GitHub. The 
 ```{r}
 Fallopia <- read.csv("InputData/FallopiaData.csv")
 ```
+
