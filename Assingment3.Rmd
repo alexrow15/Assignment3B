@@ -9,6 +9,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+
 ## Project Info
 
 Date: January 26, 2021
@@ -19,10 +21,3 @@ This report will manipualte a dataset to exemplify use of dplyr and GitHub. The 
 ```{r}
 Fallopia <- read.csv("InputData/FallopiaData.csv")
 ```
-
-##Remove Rows with **'Total'** <60
-```{r}
-Fallopia <- filter(Fallopia, Total<60)
-  
-```
-
