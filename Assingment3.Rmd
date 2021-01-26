@@ -1,0 +1,24 @@
+---
+title: "Assingment3B"
+author: "Alexander Row - 20067626"
+date: "26/01/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Project Info
+
+Date: January 26, 2021
+
+This report will manipualte a dataset to exemplify use of dplyr and GitHub. The link to my [GitHub account](https://github.com/settings/profile) with username alexrow15.
+
+##Load Fallopia Dataset
+```{r}
+Fallopia <- read.csv("InputData/FallopiaData.csv")
+```
+
+
+
