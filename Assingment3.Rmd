@@ -71,5 +71,14 @@ SummaryStats <- function(column, string){
 
 Utilising the function to count the total numer of observations in the "Taxon" column
 ```{r}
-SummaryStats(X$Taxon, "Observations")
+SummaryStats(X$TotalG, "Average")
+```
+
+Utilising the function to calculate the average TotalG for each of the two nutrient Concentrations
+```{r}
+low <- subset(X, Nutrients =="low")
+SummaryStats(low$TotalG, "Average")
+
+high <- subset(X, Nutrients =="high")
+SummaryStats(high$TotalG, "Average")
 ```
