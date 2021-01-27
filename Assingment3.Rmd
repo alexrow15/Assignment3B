@@ -45,3 +45,27 @@ X <- X %>%
   mutate(TotalG = (Total/1000)) %>% 
   select(TotalG, Taxon, Scenario, Nutrients)
 ```
+
+## Write a custom function to manipulate the dataset
+```{r}
+#####Finish this completly, save and then commit
+SummaryStats <- function(column, string){
+  if (string == "Average"){
+    return(summarise(X, mean = mean(column)))
+  } 
+  
+  if (string == "Sum"){
+    return(summarise(X, sum = sum(column)))
+  }
+  
+  if (string == "Observations"){
+    return(summarise(X, Observations = length(column)))
+  }
+  else{
+    print("Error Occurred, column name or operation not found")
+  }
+}
+SummaryStats(X$TotalG, "Sum")
+
+```
+
