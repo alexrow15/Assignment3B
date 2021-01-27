@@ -38,3 +38,10 @@ head(X)
 X <- select(Fallopia, Total, Taxon, Scenario, Nutrients)
 head(X)
 ```
+
+## Convert Total from mg to g AND replace Total with TotalG
+```{r}
+X <- X %>%
+  mutate(TotalG = (Total/1000)) %>% 
+  select(TotalG, Taxon, Scenario, Nutrients)
+```
