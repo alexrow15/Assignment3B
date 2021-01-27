@@ -48,7 +48,7 @@ X <- X %>%
 
 ## Write a custom function to manipulate the dataset
 ```{r}
-#####Finish this completly, save and then commit
+
 SummaryStats <- function(column, string){
   if (string == "Average"){
     return(summarise(X, mean = mean(column)))
@@ -65,7 +65,11 @@ SummaryStats <- function(column, string){
     print("Error Occurred, column name or operation not found")
   }
 }
-SummaryStats(X$TotalG, "Sum")
-
 ```
 
+## Test the Function
+
+Utilising the function to count the total numer of observations in the "Taxon" column
+```{r}
+SummaryStats(X$Taxon, "Observations")
+```
