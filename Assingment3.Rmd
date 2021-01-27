@@ -44,6 +44,7 @@ head(X)
 X <- X %>%
   mutate(TotalG = (Total/1000)) %>% 
   select(TotalG, Taxon, Scenario, Nutrients)
+head(X)
 ```
 
 ## Write a custom function to manipulate the dataset
@@ -78,7 +79,20 @@ Utilising the function to calculate the average TotalG for each of the two nutri
 ```{r}
 low <- subset(X, Nutrients =="low")
 SummaryStats(low$TotalG, "Average")
-
+```
+```{r}
 high <- subset(X, Nutrients =="high")
 SummaryStats(high$TotalG, "Average")
 ```
+
+## Write the Wrangled Data to a new output
+
+```{r}
+setwd("~/Desktop/Assignment3B/Output")
+write.csv(X, "WrangledData.csv")
+```
+
+
+
+
+
