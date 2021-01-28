@@ -72,7 +72,7 @@ SummaryStats <- function(column, string){
 
 Utilising the function to count the total numer of observations in the "Taxon" column
 ```{r}
-SummaryStats(X$TotalG, "Average")
+SummaryStats(X$Taxon, "Observations")
 ```
 
 Utilising the function to calculate the average TotalG for each of the two nutrient Concentrations
