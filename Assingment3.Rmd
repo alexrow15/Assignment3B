@@ -22,8 +22,8 @@ This report will manipualte a dataset to exemplify use of dplyr and GitHub. The 
 Fallopia <- read.csv("InputData/FallopiaData.csv", header = TRUE)
 ```
 
-
-```{r echo = FALSE}
+## Load Required Packages
+```{r}
 library(dplyr) #load required packages
 ```
 
