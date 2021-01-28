@@ -27,13 +27,13 @@ Fallopia <- read.csv("InputData/FallopiaData.csv", header = TRUE)
 library(dplyr) #load required packages
 ```
 
-##Remove Rows with **'Total'** <60
+## Remove Rows with **'Total'** <60
 ```{r}
 X <- filter(Fallopia, Total<60)
 head(X)
 ```
 
-##Reorder and Remove Columns
+## Reorder and Remove Columns
 ```{r}
 X <- select(Fallopia, Total, Taxon, Scenario, Nutrients)
 head(X)
@@ -75,7 +75,7 @@ Utilising the function to count the total numer of observations in the "Taxon" c
 SummaryStats(X$Taxon, "Observations")
 ```
 
-Utilising the function to calculate the average TotalG for each of the two nutrient Concentrations
+## Utilising the function to calculate the average TotalG for each of the two nutrient Concentrations
 ```{r}
 low <- subset(X, Nutrients =="low") #subset low nutrients
 SummaryStats(low$TotalG, "Average")
