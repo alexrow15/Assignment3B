@@ -16,8 +16,7 @@ library(dplyr)
 
 The following lines of code load the dataset
 ```{r}
-measurement <- read.csv("~/Desktop/BIOL432/Week 3/Assignments432/InputData/Measurements2.csv", header = TRUE)
-
+measurement <- read.csv("InputData/Measurements2.csv", header = TRUE)
 ```
 
 ## Create New Column, Arrange Columns, and remove Organism column
@@ -26,14 +25,12 @@ Use a dplyr command AND regular expression(s) to add a new column called Sp that
 
 ```{r}
 measurement <- measurement %>% 
-  mutate(Sp = sub("(\\w)\\w+", "\\1.", Organism)) %>% 
-  select(Sp, Limb.width, Limb.length)
+  mutate(Sp = sub("(\\w)\\w+", "\\1.", Organism)) %>%  #select only the first letter and place a period after it 
+  select(Sp, Limb.width, Limb.length)  #select and reorder the columns 
 measurement
 ```
 
 ```{r}
-setwd("~/Desktop/BIOL432/Week 3/Assignments432/Output") #reestablish the working directory in order to write the wrangled data to the output folder
-
 write.csv(measurement, "MeasShort.csv") #write the new data to the output file
 ```
 
