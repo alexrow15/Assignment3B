@@ -11,8 +11,7 @@ library(dplyr)
 ```
 
 ## Project Info
-
-
+This assignment uses regex syntax to manipulate organism names to display only the first letter of the genus, followed by a period and keeping the species name in tact. Regex code is used in combination with dplyr.
 
 The following lines of code load the dataset
 ```{r}
