@@ -34,7 +34,7 @@ measurement
 ```{r}
 setwd("~/Desktop/BIOL432/Week 3/Assignments432/Output") #reestablish the working directory in order to write the wrangled data to the output folder
 
-write.csv(measurement, "MeasShort.csv") 
+write.csv(measurement, "MeasShort.csv") #write the new data to the output file
 ```
 
 
