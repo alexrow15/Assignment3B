@@ -5,6 +5,7 @@ date: "03/02/2021"
 output: html_document
 ---
 
+Load required packages and knitr
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
