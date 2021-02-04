@@ -29,8 +29,10 @@ measurement <- measurement %>%
 measurement
 ```
 
+## Write out the new data
+
 ```{r}
-write.csv(measurement, "MeasShort.csv") #write the new data to the output file
+write.csv(measurement, "MeasShort.csv") #write the new data to project folder
 ```
 
 
