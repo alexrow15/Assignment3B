@@ -1,0 +1,43 @@
+---
+title: "Alex.Row.20067626.A4"
+author: "Alexander Row - 20067626"
+date: "03/02/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+```
+
+## Project Info
+
+
+
+The following lines of code load the dataset
+```{r}
+measurement <- read.csv("~/Desktop/BIOL432/Week 3/Assignments432/InputData/Measurements2.csv", header = TRUE)
+
+```
+
+## Create New Column, Arrange Columns, and remove Organism column
+
+Use a dplyr command AND regular expression(s) to add a new column called Sp that shortens the genus name in the Organism column to only the first letter and period. For example: Homo sapiens in the original Organism column becomes H. sapiens in the Sp column. HINT: You can think of the regular expression commands like sub, grep, grepl and gsub as 'functions' that you can use with dplyr commands just like mean(), sd(), and desc() in the Data Science tutorial.
+
+```{r}
+measurement <- measurement %>% 
+  mutate(Sp = sub("(\\w)\\w+", "\\1.", Organism)) %>% 
+  select(Sp, Limb.width, Limb.length)
+measurement
+```
+
+```{r}
+setwd("~/Desktop/BIOL432/Week 3/Assignments432/Output") #reestablish the working directory in order to write the wrangled data to the output folder
+
+write.csv(measurement, "MeasShort.csv") 
+```
+
+
+
+
+
